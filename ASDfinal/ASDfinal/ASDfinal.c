@@ -3,17 +3,10 @@
 
 int main() {
 	
-	//boldf("pisze");
 	mainmenu_run();
-	//submenu_lists_run(); 
-	//boldf("zakonczono program");
-	//submenu_liststw_run();
-	//submenu_trees_run();
-	//heapsort_run();
-
+	
 	/*
 	twlist *li = 0; 
-
 	twpush_sorted(&li, 3);
 	twpush_sorted(&li, 7);
 	twpush_sorted(&li, 39);
@@ -22,11 +15,9 @@ int main() {
 	twpush_sorted(&li, 22);
 	twpush_sorted(&li, 2222);
 	twpush_sorted(&li, 2);
-
 	twlist_print(li);
 	*/
-
-
+	/*
 	list *li = 0;
 	push_front(&li, 40);
 	push_front(&li, 42);
@@ -35,8 +26,7 @@ int main() {
 	list_print(li);
 	li = revr(&li);
 	list_print(li);
-	boldf("kaczka");
-
+	*/
 	/*
 	push_front(&li, 40);
 	push_front(&li, 42);

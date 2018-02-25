@@ -8,13 +8,22 @@ typedef struct listEl {
 } listElement;
 typedef listElement *list;
 
-//lista dwumiekurnkowa
+//lista dwukierunkowa
 typedef struct twlistEl {
 	int key;
 	struct twlistEl *next;
 	struct twlistEl *prev;
 } twlistElement;
 typedef twlistElement *twlist;
+
+//lista priorytetowa
+typedef struct prlistEl { //PriorListElement
+	int key;
+	int priority;
+	struct PriorListElement *next;
+	struct PriorListElement *prev;
+} prlistElement; //PriorList
+typedef prlistElement *prlist; //*PriorListEl
 
 //drzewo binarne z rodzicem
 typedef struct bTree {

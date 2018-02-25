@@ -1,8 +1,10 @@
 #include "mainmenu.h"
+#define ARRSIZE 199
 
 void mainmenu_run() 
 {
 	int run = 1;
+	int arrsize = 0;
 	while (run) 
 	{
 		int c, y;
@@ -12,8 +14,9 @@ void mainmenu_run()
 		printf("\n\t2 - algorytmy na listach sortowanych (zad.6-8)");
 		printf("\n\t3 - algorytmy na listach dwustronnych (zad.9)");
 		printf("\n\t4 - operacje na drzewie (zad.13)");
+		printf("\n\ts - porownanie wydajnosci alg. sortowania (zad.20)");
 		printf("\n\th - sortowanie przez kopce (zad.21)");
-		//printf("\n\t3 - zadania obowiazkowe");
+		printf("\n\td - wyznaczanie najkrotszych sciezek (zad.24)");
 		printf("\n\tz - wyjscie z programu\n");
 		c = _getch();
 		switch (c) {
@@ -55,12 +58,19 @@ void mainmenu_run()
 
 			break;
 
-		case 'n':
-			boldf("WYBRANO - ZADANIA OBOWIAZKOWE");
+		case 's':
+			boldf("WYBRANO - POROWNANIE ALG. SORTOWANIA");
 			printf(" ...aby przejsc dalej, wcisnij dowlony klawisz\n");
 			_getch();
 			system("cls");
-			///
+
+			int *A;
+			A = array_randomise(ARRSIZE);
+			boldf("SORTOWANA TABLICA:");
+			array_print(A, ARRSIZE);
+			boldf("QUICKSORT:");
+			qs_start(A, ARRSIZE);
+			_getch();
 			break;
 
 		case 'h':
@@ -70,6 +80,16 @@ void mainmenu_run()
 			system("cls");
 			
 			heapsort_run();
+
+			break;
+
+		case 'd':
+			boldf("WYBRANO - ALGORYTM DIJKSTRY");
+			printf(" ...aby przejsc dalej, wcisnij dowlony klawisz\n");
+			_getch();
+			system("cls");
+
+			//heapsort_run();
 
 			break;
 
