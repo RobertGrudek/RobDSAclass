@@ -1,5 +1,5 @@
 #include "mainmenu.h"
-#define ARRSIZE 199
+#define ARRSIZE 10000 //rozmiar sortowanej tablicy dla zadania 20
 
 void mainmenu_run() 
 {
@@ -65,11 +65,18 @@ void mainmenu_run()
 			system("cls");
 
 			int *A;
-			A = array_randomise(ARRSIZE);
+			A = array_randomise(ARRSIZE); //tablica ta bedzie kopiowana i sortowana przez kolejne algorytmy
 			boldf("SORTOWANA TABLICA:");
 			array_print(A, ARRSIZE);
+			boldf("ARRSIZE %d = ", ARRSIZE);
 			boldf("QUICKSORT:");
 			qs_start(A, ARRSIZE);
+			boldf("BUBBLESORT:");
+			bubblesort(A, ARRSIZE);
+			boldf("INSERTION SORT:");
+			insertionsort(A, ARRSIZE);
+			boldf("SHELLSORT:");
+			shellsort_start(A, ARRSIZE);
 			_getch();
 			break;
 
