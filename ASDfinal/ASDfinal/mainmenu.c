@@ -5,6 +5,16 @@ void mainmenu_run()
 {
 	int run = 1;
 	int arrsize = 0;
+	int dijkstra_n, dijkstra_u, dijkstra_f;
+	dijkstra_n = MAXV;
+	int dijkstra_m[MAXV][MAXV] = {
+		{ 0,1,0,0,1,0 },
+		{ 1,0,1,0,1,0 },
+		{ 0,1,0,1,0,0 },
+		{ 0,0,1,0,1,1 },
+		{ 1,1,0,1,0,0 },
+		{ 0,0,0,1,0,0 }
+	};
 	while (run) 
 	{
 		int c, y;
@@ -16,7 +26,7 @@ void mainmenu_run()
 		printf("\n\t4 - operacje na drzewie (zad.13)");
 		printf("\n\ts - porownanie wydajnosci alg. sortowania (zad.20)");
 		printf("\n\th - sortowanie przez kopce (zad.21)");
-		printf("\n\td - wyznaczanie najkrotszych sciezek (zad.24)");
+		printf("\n\td - wyznaczanie najkrotszych sciezek alg. Dijkstry(zad.24)");
 		printf("\n\tz - wyjscie z programu\n");
 		c = _getch();
 		switch (c) {
@@ -95,8 +105,12 @@ void mainmenu_run()
 			printf(" ...aby przejsc dalej, wcisnij dowlony klawisz\n");
 			_getch();
 			system("cls");
-
-			//heapsort_run();
+			printf("\nW grafie istnieja wierzcholki ponumerowane od: 0 do: %d\n", MAXV-1);
+			printf("\nPodaj poczatkowy wierzcholek:");
+			scanf("%d", &dijkstra_u);
+			printf("\Podaj wierzcholek koncowy:");
+			scanf("%d", &dijkstra_f);
+			dijkstra(dijkstra_m, dijkstra_n, dijkstra_u, dijkstra_f);
 
 			break;
 

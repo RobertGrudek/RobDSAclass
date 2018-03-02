@@ -148,6 +148,7 @@
   <ItemGroup>
     <ClCompile Include="ASDfinal.c" />
     <ClCompile Include="ex1.c" />
+    <ClCompile Include="ex11.c" />
     <ClCompile Include="ex13.c" />
     <ClCompile Include="ex2.c" />
     <ClCompile Include="ex20.c" />
@@ -171,6 +172,7 @@
   <ItemGroup>
     <ClInclude Include="datastructures.h" />
     <ClInclude Include="ex1.h" />
+    <ClInclude Include="ex11.h" />
     <ClInclude Include="ex12.h" />
     <ClInclude Include="ex13.h" />
     <ClInclude Include="ex2.h" />

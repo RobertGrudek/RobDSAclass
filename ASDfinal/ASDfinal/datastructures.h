@@ -17,13 +17,12 @@ typedef struct twlistEl {
 typedef twlistElement *twlist;
 
 //lista priorytetowa
-typedef struct prlistEl { //PriorListElement
+typedef struct prlistEl {
 	int key;
 	int priority;
-	struct PriorListElement *next;
-	struct PriorListElement *prev;
-} prlistElement; //PriorList
-typedef prlistElement *prlist; //*PriorListEl
+	struct prlistEl *next;
+} prlistElement; 
+typedef prlistElement *prlist; 
 
 //drzewo binarne z rodzicem
 typedef struct bTree {
@@ -34,3 +33,4 @@ typedef struct bTree {
 	struct bTree *parent;
 } bTreeRoot;
 typedef bTreeRoot *bTree;
+

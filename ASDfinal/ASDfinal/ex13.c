@@ -73,16 +73,12 @@ void del_node_bTree(bTree *b, char *buffer) {
 		(*tmp)->counter--;
 		return;
 	}
-	//tu cos smierdzi, gdzie ta glowa?:
 	if ((*tmp)->left == NULL && (*tmp)->right == NULL) { to_del = tmp; }
 	else 
 	{
-		to_del = tmp;
-		(*to_del)->parent->left = (*to_del)->left;
-		(*to_del)->parent->right = (*to_del)->right;
-		//to_del = MaxT((*b)->left);
-		//(*b)->data = (*to_del)->data;
-		//(*b)->counter = (*to_del)->counter;
+		to_del = MaxT((*b)->left);
+		(*b)->data = (*to_del)->data;
+		(*b)->counter = (*to_del)->counter;
 	}
 	del = *to_del;
 	if ((*to_del)->left == NULL) { *to_del = (*to_del)->right; }
@@ -109,19 +105,13 @@ void ZwolnijD(bTree *d) {
 	*d = 0;
 }
 
-
-
-
-
-
-
 //////
 void parent_inorder(bTree *b) {
 	bTree current = *b;
 	bTree previous = NULL;
 
 	while (current != NULL) {
-		if (previous == current->parent) { //go down
+		if (previous == current->parent) { //idz w  dol
 			previous = current;
 			if (current->left) {
 				current = current->left;
@@ -134,7 +124,7 @@ void parent_inorder(bTree *b) {
 					current = current->parent;
 			}
 		}
-		else if (previous == current->left) { // up from left child.
+		else if (previous == current->left) { // do gory z lewego dziecka
 			previous = current;
 			string_data_print(&(*b));
 			if (current->right)
@@ -142,7 +132,7 @@ void parent_inorder(bTree *b) {
 			else
 				current = current->parent;
 		}
-		else if (previous == current->right) { // up from right child.
+		else if (previous == current->right) { // do gory z prawego
 			previous = current;
 			current = current->parent;
 		}

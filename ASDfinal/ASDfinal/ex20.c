@@ -1,5 +1,5 @@
 #include "ex20.h"
-
+//Porownac wydajnosc sortowania metodami: bubblesort, przez wstawianie, metoda Shell i quick sort.
 int * array_randomise(int size)
 {
 	int *A = malloc(size * sizeof(*A));

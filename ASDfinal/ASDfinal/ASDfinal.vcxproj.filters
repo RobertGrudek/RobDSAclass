@@ -78,6 +78,9 @@
     <ClCompile Include="ex24.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ex11.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mainmenu.h">
@@ -147,6 +150,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ex24.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ex11.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

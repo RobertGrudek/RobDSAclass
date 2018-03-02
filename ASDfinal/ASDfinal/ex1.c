@@ -22,6 +22,7 @@ void push_back(list *l_p, int key)
 	current->next = p;
 }
 
+
 void pop_front(list *l_p)
 {
 	if (*l_p != NULL)
