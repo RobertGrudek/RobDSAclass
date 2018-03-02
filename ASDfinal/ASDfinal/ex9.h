@@ -8,6 +8,5 @@ void twcpush_front(twlist, int);
 void twlist_print(twlist);
 void twclist_print(twlist);
 
-//void deleteElementC(twlist);
 void search_tw(twlist, int);
 void search_twc(twlist, int);

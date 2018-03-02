@@ -81,7 +81,7 @@ void twclist_print(twlist lc) {
 	printf("\n");
 }
 
-////eh kurna
+////eh 
 void search_twc(twlist *l, int _key) {
 	twlist p, temp = *l;
 	if (*l == NULL) { return; }
